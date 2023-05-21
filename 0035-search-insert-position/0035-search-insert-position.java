@@ -13,11 +13,3 @@ class Solution {
         }
     }
 }
-
-// Input
-// [1,3,5,6]
-// 2
-// Output
-// 4
-// Expected
-// 1
