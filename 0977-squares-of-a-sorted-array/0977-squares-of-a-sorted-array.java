@@ -8,12 +8,5 @@ class Solution {
         }
         Arrays.sort(a);
         return a;
-        
-//         double p = 0;
-//         for (int i=0 ; i < nums.length; i++){
-//             p = Math.pow(nums[i] , 2);
-            
-//         }
-//         return Arrays.sort((int)p);
     }
 }
