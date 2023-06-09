@@ -9,7 +9,8 @@ class Solution {
            al.add("Fizz");
         } else if (i % 5==0){
            al.add("Buzz");
-        } else {
+        } 
+            else {
              al.add(String.valueOf(i));
         }
         }
