@@ -1,22 +1,32 @@
 class Solution {
     public String mergeAlternately(String word1, String word2) {
-        String s = "";
-        int a = word1.length();
-        int b= word2.length();
-        char[] w1 = word1.toCharArray();
-        char[] w2 = word2.toCharArray();
+       String s = "";
+        char a[] = word1.toCharArray();
+        char b[] = word2.toCharArray();
         
-        if (a<b){
-            for (int i =0; i <a; i++){
-                s += String.valueOf(w1[i]) + String.valueOf(w2[i]);
-            }
-            s += word2.substring(a,b);
-        } else {
-            for (int i =0; i <b; i++){
-                s += String.valueOf(w1[i]) + String.valueOf(w2[i]);
-            }
-            s += word1.substring(b,a);
+        List<Character> al = new ArrayList<>();
+        for (int i =0; i<a.length; i++){
+            al.add(a[i]);
         }
+        List<Character> all = new ArrayList<>();
+        for (int i =0; i <b.length; i++){
+            all.add(b[i]);
+        }
+        
+            if (a.length < b.length){
+                for (int i = 0; i<a.length; i++){
+                    s += String.valueOf(a[i]) + String.valueOf(b[i]);
+                }
+                s += word2.substring(word1.length());
+            } else {
+                for (int i=0; i<b.length; i++){
+                    s += String.valueOf(a[i]) + String.valueOf(b[i]);
+                }
+                s += word1.substring(word2.length());
+            }
+            
+        
         return s;
     }
 }
+
