@@ -1,16 +1,15 @@
 class Solution {
     public char repeatedCharacter(String s) {
+        char c = 'a';
         List<Character> al = new ArrayList<>();
-        char aa = 'a';
-        for(int i=0; i<s.length(); i++) {
-            if(al.contains(s.charAt(i))) {
-                aa = s.charAt(i);
+        for (int i=0; i<s.length(); i++){
+            if (al.contains(s.charAt(i))){
+                c = s.charAt(i);
                 break;
-            }
-            else {
+            } else {
                 al.add(s.charAt(i));
             }
         }
-        return aa;
+        return c;
     }
 }
