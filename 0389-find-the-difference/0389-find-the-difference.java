@@ -4,10 +4,10 @@ class Solution {
             char[] d = t.toCharArray();
         char p = 0;
         for (int i=0; i< c.length; i++){
-            p -= c[i];
+            p ^= c[i];
         }
         for (int i =0; i< d.length; i++){
-            p += d[i];
+            p ^= d[i];
         }
         return p;
 }
