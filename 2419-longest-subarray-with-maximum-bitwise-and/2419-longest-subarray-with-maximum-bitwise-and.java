@@ -6,12 +6,11 @@ class Solution {
         }
         int count = 1;
         int max_length = 1;
-        for (int i =1; i < nums.length; i++){
-            if (max == nums[i] && nums[i] == nums[i-1]){
+        for (int i =0; i < nums.length-1; i++){
+            if (max == nums[i] && nums[i] == nums[i+1]){
                 count++;
             } else {
                 count = 1;
-                
             }
             max_length = Math.max(max_length, count);
         }
