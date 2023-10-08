@@ -4,6 +4,7 @@ class Solution {
         for(int i : nums){
             al.add(i);
         }
+        
         if (al.contains(target)){
             return al.indexOf(target);
         } else {
