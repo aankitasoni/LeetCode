@@ -1,5 +1,5 @@
 class Solution {
-    public int longestOnes(int[] nums, int k) {
+    public int longestOnes(int[] nums, int k){
         int i =0, j =0;
        while (j < nums.length){
            if (nums[j] == 0){
