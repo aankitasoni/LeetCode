@@ -7,11 +7,10 @@ class Solution {
                 ans = Math.max(ans, s.charAt(i)-'0'); 
             }
         }
+        String p =  String.valueOf(ans);
         if (ans != -1){
-            res = String.valueOf(ans) + String.valueOf(ans) + String.valueOf(ans);
-            // return res;
+            res =  p+p+p;
         }
-         
         return res;
     }
 }
