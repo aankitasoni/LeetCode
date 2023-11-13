@@ -5,7 +5,7 @@ class Solution {
         } 
         int x = 1, y =2;
         for (int i = 2; i < n; i++){
-            int steps = x;
+            int steps = x; 
             x = y;
             y = steps + x;
         }
