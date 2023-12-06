@@ -7,10 +7,10 @@ class Solution {
             ss[i] = ss[i].toLowerCase();
             
             if(ss[i].length() <= 2){
-                sb.append(ss[i]).append(" ");
+                sb.append(ss[i] + " ");
             } else {
                 ss[i] = ss[i].substring(0,1).toUpperCase() + ss[i].substring(1);
-                sb.append(ss[i]).append(" ");
+                sb.append(ss[i] + " ");
             }
         }
         return sb.toString().trim();
