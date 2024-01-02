@@ -11,7 +11,8 @@ class Solution {
     }
     
     public static boolean cantype(String p, String x){
-        for (char c : x.toCharArray()) {
+        for (int i =0; i < x.length(); i++) {
+            char c = x.charAt(i);
         if (p.contains(String.valueOf(c))) {
             return false;
         }
