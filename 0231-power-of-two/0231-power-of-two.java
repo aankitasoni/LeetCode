@@ -9,11 +9,3 @@ class Solution {
         return false;
     }
 }
- 
-
-// for (int i =0; i<= n ; i++){
-//             if (Math.pow(2, i) == n){
-//                 return true;
-//             }
-//         }
-//         return false;
