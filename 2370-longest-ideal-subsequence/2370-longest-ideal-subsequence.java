@@ -1,0 +1,42 @@
+class Solution {
+
+    private static final int MIN_LENGTH  = 1,
+                             MAX_DIFF    = 25,
+                             NUM_LETTERS = 26;
+
+    private static final char A_LOWER = 'a';
+
+    public int longestIdealString(String s, int k) {
+
+        int length = s.length();
+
+        if (length == MIN_LENGTH || k == MAX_DIFF)
+            return length;
+
+        int[] dp = new int[NUM_LETTERS];
+
+        char[] word = s.toCharArray();
+        
+        for(int index = 0; index < length; index++){
+
+            int idx   = (int)(word[index] - A_LOWER),
+                value = 0,
+                left  = Math.max(idx - k, 0),
+                right = Math.min(idx + k, MAX_DIFF) + 1;
+            
+            while (left < right)
+                value = Math.max(value, dp[left++]);
+            
+            dp[idx] = value + 1;
+        }
+        
+        int maxLength = 0;
+        
+        for (int index = 0; index < NUM_LETTERS; index++)
+            if (dp[index] > maxLength)
+                maxLength = dp[index];
+        
+        return maxLength;
+        
+    }
+}
