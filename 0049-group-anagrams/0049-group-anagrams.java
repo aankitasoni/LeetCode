@@ -2,7 +2,8 @@ class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
          List<List<String>> res = new ArrayList<>();
         if(strs.length == 0) return res;
-
+        
+        
         HashMap<String, List<String>> map = new HashMap<>();
         for(String s : strs) {
             char hash[] = new char[26];
