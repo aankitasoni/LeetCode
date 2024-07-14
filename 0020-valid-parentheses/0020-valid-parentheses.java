@@ -1,12 +1,34 @@
 class Solution {
     public boolean isValid(String s) {
-     while (s.length() != 0){
-         String p = s.replace("()", "").replace("[]", "").replace("{}", "");
-         if (s.equals(p)){
-             return false;
-         }
-         s = p;
-     }
-        return true;
+     Stack<Character> st = new Stack<>();
+        for (char ch : s.toCharArray()){
+            if(ch == '(' || ch == '[' || ch == '{' ){
+                st.push(ch);
+            } else {
+                if( ch == ')'){
+                    if (st.isEmpty() || st.pop() != '('){
+                        return false;
+                    }
+                } 
+                if (ch == ']'){
+                    if (st.isEmpty() ||  st.pop() != '[') return false;
+                }
+                if ( ch == '}'){
+                    if (st.isEmpty() || st.pop() != '{') return false;
+                }
+            }
+        }
+        return st.isEmpty();
     }
 }
+
+
+
+// while (s.length() != 0){
+//          String p = s.replace("()", "").replace("[]", "").replace("{}", "");
+//          if (s.equals(p)){
+//              return false;
+//          }
+//          s = p;
+//      }
+//         return true;
